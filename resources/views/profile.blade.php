@@ -15,11 +15,9 @@
             <span>Nama: <?= $nama ?></span>
         </div>
         <div class="item">
-            <span>Kelas: <?= $kelas ?></span>
-        </div>
-        <div class="item">
             <span>NPM: <?= $npm ?></span>
         </div>
+        <div class="item">{{$nama_kelas ?? 'Kelas tidak ditemukan' }}</div>
     </div>
 </body>
 </html>
