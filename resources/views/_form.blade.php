@@ -15,7 +15,7 @@
             <div class="text-danger">{{ $message }}</div>
         @endforeach
     </div>
-<br>
+    <br>
     <div class="mb-3">
         <label for="kelas" class="form-label">Kelas </label>
         <select name="kelas_id" id="kelas_id" class="form-select" required>

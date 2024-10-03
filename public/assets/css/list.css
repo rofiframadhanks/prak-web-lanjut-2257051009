@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    background-color: #2e2e2e;
+    color: #fff;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+table {
+    width: 80%;
+    max-width: 1000px;
+    border-collapse: collapse;
+    background-color: #3a3a3a;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+thead {
+    background-color: #13a1ff;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+th, td {
+    padding: 16px 20px;
+    text-align: left;
+    border-bottom: 1px solid #444;
+}
+
+th {
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+tbody tr {
+    transition: background-color 0.2s ease;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #3e3e3e;
+}
+
+tbody tr:hover {
+    background-color: #444;
+}
+
+td {
+    font-size: 14px;
+}
+
+td:last-child {
+    text-align: center;
+}
+
+.button {
+    padding: 10px 15px;
+    background-color: #13a1ff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.button:hover {
+    background-color: #0d8adb;
+    transform: translateY(-3px);
+}
+
+/* Make the table responsive */
+@media (max-width: 768px) {
+    table {
+        width: 100%;
+    }
+
+    th, td {
+        padding: 10px 15px;
+        font-size: 12px;
+    }
+
+    .button {
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+}
