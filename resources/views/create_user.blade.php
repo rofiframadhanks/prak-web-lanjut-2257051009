@@ -2,7 +2,8 @@
 @section('content')
 <div>
     <!-- Isi Section -->
-    <form action="{{ route('user.store') }}" method="POST">
+    <!-- <form action="{{ route('user.store') }}" method="POST"> -->
+    <form action="{{ route('user.store') }}" method="POST" enctype="multipart/form-data">
     @csrf
     
     <div class="mb-3">
@@ -35,6 +36,13 @@
             <p class="text-danger">{{ $message }}</p>
         @endforeach
     </div>
+    <br>
+
+    <div>
+        <label for="foto">foto: </label><br>
+        <input type="file" id="foto" name="foto"><br><br>
+    </div>
+
     <br><br>
 
     <button type="submit" class="btn btn-primary">Submit</button>
