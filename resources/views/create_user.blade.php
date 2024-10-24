@@ -13,15 +13,22 @@
             <div class="text-danger">{{ $message }}</div>
         @endforeach
     </div>
+
     <br>
-    <div class="mb-3">
-        <label for="npm" class="form-label">NPM                         </label>
-        <input type="text" id="npm" name="npm" class="form-control" value="{{ old('npm', $user->npm ?? '') }}" required>
-        @foreach($errors->get('npm') as $message)
-            <div class="text-danger">{{ $message }}</div>
-        @endforeach
+
+    <div class="mb-4">
+            <label for="jurusan" class="block text-sm font-bold mb-2">Jurusan</label>
+            <input type="text" name="jurusan" id="npm" class="w-full p-2 border border-gray-300 rounded" value="{{ old('npm') }}">
+        </div>
+
+
+    <div class="mb-4">
+        <label for="jurusan" class="block text-sm font-bold mb-2">Semester</label>
+        <input type="text" name="semester" id="npm" class="w-full p-2 border border-gray-300 rounded" value="{{ old('semester') }}">
     </div>
+    
     <br>
+
     <div class="mb-3">
         <label for="kelas" class="form-label">Kelas </label>
         <select name="kelas_id" id="kelas_id" class="form-select" required>
@@ -36,6 +43,12 @@
             <p class="text-danger">{{ $message }}</p>
         @endforeach
     </div>
+
+    <div class="mb-4">
+            <label for="fakultas" class="block text-sm font-bold mb-2">Fakultas</label>
+            <input type="text" name="fakultas" id="npm" class="w-full p-2 border border-gray-300 rounded" value="{{ old('npm') }}">
+    </div>
+
     <br>
 
     <div>
