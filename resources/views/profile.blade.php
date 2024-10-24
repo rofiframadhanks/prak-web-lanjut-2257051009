@@ -11,14 +11,27 @@
         <div class="profil-img">
             <img src="{{ asset($user->foto) }}" alt="Foto Profile">
         </div>
+
         <div class="item">
             <span>Nama: {{ $user->nama }}</span>
         </div>
+
         <div class="item">
-            <span>NPM: {{ $user->npm }}</span>
+            <span>Semester: {{ $user->semester }}</span>
         </div>
+        <!-- <div class="item">
+            <span>NPM: {{ $user->npm }}</span>
+        </div> -->
         <div class="item">
             {{ $user->nama_kelas ?? 'Kelas tidak ditemukan' }}
+        </div>
+
+        <div class="item">
+            <span>Fakultas: {{ $user->fakultas }}</span>
+        </div>
+
+        <div class="item">
+            <span>Jurusan: {{ $user->jurusan }}</span>
         </div>
     </div>
 </body>

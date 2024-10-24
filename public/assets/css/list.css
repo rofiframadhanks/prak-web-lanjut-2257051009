@@ -1,110 +1,124 @@
-/* Reset and Base Styling */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+/* General styles for dark theme */
 body {
-    font-family: 'Poppins', Arial, sans-serif;
-    background-color: #2e2e2e;
-    color: #fff;
-    padding: 40px;
-    display: flex;
-    flex-direction: column; /* Mengatur flex direction ke kolom */
-    justify-content: center; /* Memusatkan elemen secara vertikal */
-    align-items: center; /* Memusatkan elemen secara horizontal */
-    min-height: 100vh; /* Memastikan body memiliki tinggi minimal 100% viewport */
+    background-color: #2e2e2e; /* Dark grey background */
+    color: #f1f1f1; /* Light text for contrast */
+    font-family: 'Arial', sans-serif;
 }
 
-/* Button Styling */
-.btn-tambah {
-    background-color: #13a1ff;
-    color: #fff;
-    text-decoration: none;
-    font-size: 14px; /* Ukuran font yang sesuai */
-    font-weight: bold;
-    padding: 10px 20px; /* Ukuran padding yang lebih seimbang */
-    border-radius: 5px;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-    margin-bottom: 20px; /* Jarak di bawah tombol */
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
 }
 
-.btn-tambah:hover {
-    background-color: #0d8adb;
-    transform: translateY(-2px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-}
-
-.btn-tambah:active {
-    transform: translateY(1px);
-    box-shadow: none;
-}
-
-/* Table Styling */
-table {
-    width: 80%;
-    max-width: 1000px;
-    border-collapse: collapse;
-    background-color: #3a3a3a;
+form, .btn-tambah, .overflow-x-auto {
+    background-color: #3a3a3a; /* Slightly lighter dark grey for form and container backgrounds */
+    padding: 20px;
     border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-    margin: 0 auto; /* Memusatkan tabel */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Soft shadow effect */
+    margin-bottom: 20px;
 }
 
-thead {
-    background-color: #13a1ff;
-    color: #fff;
-    text-transform: uppercase;
+/* Form Elements */
+.form-label, .block {
+    color: #b0b0b0; /* Grey text for labels */
+    font-weight: bold;
+}
+
+input[type="text"], select, input[type="file"], table {
+    background-color: #444; /* Dark grey for input fields and table */
+    color: #f1f1f1; /* White text inside inputs */
+    border: 1px solid #5a5a5a; /* Slightly lighter grey border */
+    padding: 10px;
+    border-radius: 5px;
+    width: 100%;
+    margin-bottom: 10px;
+    transition: border 0.3s ease;
+}
+
+input[type="text"]:focus, select:focus, input[type="file"]:focus {
+    border-color: #00cfff; /* Light blue border on focus */
+    outline: none;
+}
+
+button, a.btn-tambah a, .table a {
+    background-color: #00cfff; /* Light blue button */
+    color: #2e2e2e; /* Dark grey text on the button */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+}
+
+button:hover, .btn-tambah a:hover, .table a:hover {
+    background-color: #00b5e6; /* Darker blue on hover */
+}
+
+/* Error Messages */
+.text-danger {
+    color: #ff6b6b; /* Red for error messages */
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background-color: #444; /* Dark grey table background */
 }
 
 th, td {
-    padding: 12px 15px; /* Ukuran padding untuk cell tabel */
+    padding: 12px 15px;
     text-align: left;
-    border-bottom: 1px solid #444;
+    border-bottom: 1px solid #555; /* Slightly lighter grey for borders */
+    color: #f1f1f1;
 }
 
-th {
-    font-size: 16px;
-    font-weight: bold;
-    letter-spacing: 1px;
+thead {
+    background: linear-gradient(to right, #00b5e6, #00cfff); /* Light blue gradient for header */
+    color: #fff;
 }
 
 tbody tr {
-    transition: background-color 0.2s ease;
-}
-
-tbody tr:nth-child(even) {
-    background-color: #3e3e3e;
+    transition: background-color 0.2s;
 }
 
 tbody tr:hover {
-    background-color: #444;
+    background-color: #555; /* Darker grey on hover */
 }
 
-td {
-    font-size: 14px;
+/* Action buttons in the table */
+.table a {
+    background-color: #00cfff;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
 }
 
-td:last-child {
-    text-align: center;
+.table a:hover {
+    background-color: #00b5e6; /* Darker blue on hover */
 }
 
-/* Make the table responsive */
-@media (max-width: 768px) {
-    table {
-        width: 100%;
-    }
+button.bg-red-500 {
+    background-color: #ff4d4d; /* Red for delete button */
+}
 
-    th, td {
-        padding: 10px 12px;
-        font-size: 12px;
-    }
+button.bg-red-500:hover {
+    background-color: #ff1a1a; /* Darker red on hover */
+}
 
-    .btn-tambah {
-        padding: 8px 12px; /* Padding lebih kecil di perangkat kecil */
-        font-size: 12px; /* Ukuran font lebih kecil di perangkat kecil */
-    }
+/* Miscellaneous */
+.flex {
+    display: flex;
+    justify-content: center;
+}
+
+.space-x-2 {
+    gap: 10px;
 }
