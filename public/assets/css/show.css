@@ -1,0 +1,104 @@
+/* Reset and Base Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    background-color: #444; /* Updated background color */
+    color: #fff;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Card Styling for User Profile */
+.card-profile {
+    background-color: #fff;
+    color: #444; /* Updated text color to match the new background */
+    padding: 40px;
+    border-radius: 30px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-profile:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+}
+
+/* Image Styling */
+.card-profile img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 4px solid #13a1ff; /* Updated border color */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Information Cards */
+.info-card {
+    display: inline-block;
+    background: linear-gradient(135deg, #13a1ff 0%, #ff477e 100%); /* Updated gradient to start with the new accent color */
+    padding: 15px 30px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.info-card:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Back Button Styling */
+.back-button {
+    display: inline-block;
+    background-color: #13a1ff; /* Accent color */
+    color: white;
+    padding: 12px 24px;
+    border-radius: 30px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.back-button:hover {
+    background-color: #0d8adb;
+    transform: translateY(-2px);
+}
+
+/* Make the profile card responsive */
+@media (max-width: 768px) {
+    .card-profile {
+        padding: 20px;
+    }
+
+    .card-profile img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .info-card {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+
+    .back-button {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+}
